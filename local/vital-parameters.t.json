@@ -626,7 +626,17 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_QUANTITY",
-                          "attributes" : [ ],
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "property",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "openehr"
+                              },
+                              "constraint" : [ "125" ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ {
                             "@type" : "C_ATTRIBUTE_TUPLE",
                             "members" : [ {
@@ -687,7 +697,17 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_QUANTITY",
-                          "attributes" : [ ],
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "property",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "openehr"
+                              },
+                              "constraint" : [ "125" ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ {
                             "@type" : "C_ATTRIBUTE_TUPLE",
                             "members" : [ {
@@ -841,7 +861,17 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_QUANTITY",
-                          "attributes" : [ ],
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "property",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "openehr"
+                              },
+                              "constraint" : [ "497" ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ {
                             "@type" : "C_ATTRIBUTE_TUPLE",
                             "members" : [ {
@@ -900,8 +930,31 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "INTERVAL_EVENT",
-              "nodeId" : "at1042",
+              "occurrences" : "0..0",
+              "nodeId" : "at1042.1",
               "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003.2",
+                  "targetPath" : "/data[at0001]/events[at0006]/data[at0003.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0007.2",
+                  "targetPath" : "/data[at0001]/events[at0006]/state[at0007.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "math_function",
                 "children" : [ {
@@ -912,8 +965,7 @@
                     "rmAttributeName" : "defining_code",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
-                      "occurrences" : "1..1",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
                       "terminologyId" : {
                         "value" : "openehr"
                       },
@@ -947,26 +999,160 @@
                   } ],
                   "attributeTuples" : [ ]
                 } ]
-              }, {
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0011",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0013.1",
+              "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
+                "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003.2",
-                  "targetPath" : "/data[at0001]/events[at0006]/data[at0003.1]",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.4" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0014.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.5" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
-              }, {
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1035.1",
+              "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "state",
+                "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0007.2",
-                  "targetPath" : "/data[at0001]/events[at0006]/state[at0007.1]",
-                  "attributes" : [ ],
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.6" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1038.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1054.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1055.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1010.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.7" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -1000,6 +1186,30 @@
             "text" : "(Synthesized)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "ja" : {
@@ -1019,6 +1229,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1040,6 +1274,30 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "zh-cn" : {
@@ -1059,6 +1317,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1080,6 +1362,30 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "ru" : {
@@ -1099,6 +1405,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1120,6 +1450,30 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "ar-sy" : {
@@ -1139,6 +1493,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1160,6 +1538,30 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "pt-br" : {
@@ -1179,6 +1581,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1200,6 +1626,30 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "es" : {
@@ -1219,6 +1669,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1240,6 +1714,30 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         },
         "sv" : {
@@ -1259,6 +1757,30 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
+            "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
             "description" : "*"
           }
         },
@@ -1280,12 +1802,37 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : "*"
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : "*"
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : "*"
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : "*"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : "*"
           }
         }
       },
       "termBindings" : {
         "SNOMED-CT" : {
-          "at0000.1" : "term:SNOMED-CT(2003)::364090009"
+          "at0000.1" : "term:SNOMED-CT(2003)::364090009",
+          "at0013.1" : "term:SNOMED-CT(2003)::246153002"
         }
       },
       "terminologyExtracts" : { },
@@ -1304,6 +1851,26 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.3",
           "members" : [ "at1044", "at1045" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0015", "at0016", "at0017", "at1008", "at1009", "at1018", "at1019" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0025", "at0026", "at0027", "at0028", "at1020", "at1021", "at1026", "at1031", "at1032", "at1051", "at1056", "at1053" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at1036", "at1037", "at1039", "at1040" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at1011", "at1012" ]
         }
       }
     },
@@ -1849,6 +2416,54 @@
           } ],
           "attributeTuples" : [ ]
         } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0020",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0021.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.2" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
       } ],
       "attributeTuples" : [ ]
     },
@@ -1862,6 +2477,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : "*"
           }
         },
         "ru" : {
@@ -1869,6 +2490,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
+            "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
             "description" : "*"
           }
         },
@@ -1878,6 +2505,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : "*"
           }
         },
         "es-ar" : {
@@ -1885,6 +2518,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
+            "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
             "description" : "*"
           }
         },
@@ -1894,6 +2533,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : "*"
           }
         },
         "pt-br" : {
@@ -1901,6 +2546,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
+            "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
             "description" : "*"
           }
         },
@@ -1910,6 +2561,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : "*"
           }
         },
         "de" : {
@@ -1917,6 +2574,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
+            "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
             "description" : "*"
           }
         },
@@ -1926,6 +2589,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : "*"
           }
         },
         "sv" : {
@@ -1934,6 +2603,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : "*"
           }
         },
         "ja" : {
@@ -1941,6 +2616,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
+            "description" : "*"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
             "description" : "*"
           }
         }
@@ -1955,6 +2636,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.1",
           "members" : [ "at0031", "at0032", "at0033", "at0034" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0025", "at0024", "at0023", "at0061", "at0022", "at0026", "at0027", "at0028", "at0043", "at0051", "at0054", "at0055", "at0060" ]
         }
       }
     },
@@ -3435,29 +4121,9 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "INTERVAL_EVENT",
-              "nodeId" : "at1036",
+              "occurrences" : "0..0",
+              "nodeId" : "at1036.1",
               "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "math_function",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "openehr"
-                      },
-                      "constraint" : [ "144" ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
                 "children" : [ {
@@ -3660,6 +4326,103 @@
                   } ],
                   "attributeTuples" : [ ]
                 } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "math_function",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "144" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0010",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1019.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.13" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1037.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.14" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
               } ],
               "attributeTuples" : [ ]
             } ]
@@ -3745,6 +4508,18 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : "*"
           }
         },
         "es-co" : {
@@ -3818,6 +4593,18 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
+            "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : "*"
           }
         },
@@ -3893,6 +4680,18 @@
             "text" : "(Synthesized)",
             "code" : "ac0.12",
             "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.14",
+            "description" : "*"
           }
         },
         "de" : {
@@ -3966,6 +4765,18 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
+            "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : "*"
           }
         },
@@ -4041,6 +4852,18 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : "*"
           }
         },
         "pt-br" : {
@@ -4114,6 +4937,18 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
+            "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : "*"
           }
         },
@@ -4189,6 +5024,18 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : "*"
           }
         },
         "es" : {
@@ -4262,6 +5109,18 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
+            "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : "*"
           }
         },
@@ -4337,6 +5196,18 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : "*"
           }
         },
         "nb" : {
@@ -4411,6 +5282,18 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.12",
             "description" : "*"
+          },
+          "ac0.13" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.13",
+            "description" : "*"
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : "*"
           }
         }
       },
@@ -4476,6 +5359,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.12",
           "members" : [ "at1003", "at1001", "at1002", "at1000" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at1032", "at1033", "at1034", "at1050" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at1038", "at1039", "at1040", "at1041", "at1042", "at1043", "at1044", "at1049", "at1048", "at1047", "at1054", "at1051" ]
         }
       }
     },
@@ -4627,7 +5520,166 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "7685C0FC99D16016F9F78CE0DF5E834C"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation der Sauerstoffsättigung im Blut unter Benutzung eines Pulsoxymeters.",
+          "keywords" : [ "Sauerstoff", "Behandlung mit Sauerstoff", "Pulsoxymeter", "Pulsoxymetrie" ],
+          "use" : "*",
+          "misuse" : "*",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Для записи результатов непрямых,в настоящее время неинвазивных, измерений газового состава крови, таких как SpO2 (насыщение кислородом периферической крови) и pTCO2 (насыщение углекислым газом), полученных методами пульсовой оксиметрии, чрескожной оксиметрии или другими методами.\r\n\r\nВполне вероятно, что этот архетип будет использоваться, в основном, для записи оценок оксигенации, однако в него могут быть включены или добавлены со временем измерения и других газов.",
+          "keywords" : [ "парциальное давление", "насыщение", "карбоксигемоглобин", "метгемоглобин", "чрескожный", "пульс", "оксиметр", "оксиметрия", "концентрация", "неинвазивный", "жизненный", "кислород", "углекислый газ", "О2", "СО2", "оксигенация" ],
+          "use" : "Используется для записи результатов непрямых,в настоящее время неинвазивных, измерений газового состава крови. Новые непрямые измерения газов крови должны добавляться к этому архетипу.\r\n\r\nЕсли записывающее устройство также обеспечивает другой тип измерения,например, такой как частота пульса, то это должно быть записано в отдельный архетип, соответствующий данному измерению, например, OBSERVATION.heart_rate, для обеспечения последовательных запросов.\r\n\r\nЦель состоит в том, чтобы последовательно моделировать клиническое понятие, а не моделировать вывод данных с устройства. Устройства становятся все более многофункциональными и обеспечивают дублирование измерений, которые, возможно, придется записывать с помощью ряда отдельных архетипов.\r\n\r\nОсциллограммы должны быть зарегистрированы здесь, когда используются для документирования качества измерений газов крови. В отличие от этого, если они используется для первичной диагностики, например, сердечного выброса, плетизмограммы должны быть записаны в ключевом клиническом архетипе - OBSERVATION.heart_rate-pulse.",
+          "misuse" : "Любые измерения газов крови, который включает прямой контакт с кровью, а также измерения PaO2 (парциальное давление кислорода), PaCO2 (парциальное давление углекислого газа) не должны записываться с помощью этого архетипа - для таких измерений используется архетип OBSERVATION.lab_test-blood_gases. Новые прямые измерения газов крови должны быть добавлены к архетипу OBSERVATION.lab_test-blood_gases.v1.\r\n\r\nНЕ использовать для записи прямого измерения газов крови. Например, насыщение кислородом артериальной (SaO2) или венозной (SvO2) крови, или содержание кислорода (CAOC), которые обычно определяются инвазивными методами, например, специальными лабораториями газов крови или с помощью сосудистых катетеров. Такие измерения должны быть записаны в архетип OBSERVATION.lab_test-blood_gases.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att mäta den nuvarande icke-invasiva syrehalten i blodet såsom SpO2 och SpCO sekundärt, genom pulsoximetri eller andra metoder.",
+          "keywords" : [ "syre", "syrsättning", "syremättnad", "SpO2", "spMet", "spCO", "spOC", "karboxihemoglobin", "methemoglobin", "transkutan", "puls", "oximeter", "oximetri", "koncentration", "partiell", "tryck", "icke-invasiv", "vital", "O2", "CO2", "koldioxid", "SaO₂", "SaO2" ],
+          "use" : "Används för att mäta nuvarande icke-invasiva, syrehalter i blodet, såsom SpO2 och SpCO, sekundärt genom pulsoximetri eller andra metoder.\r\n\r\nVågformer bör registreras här vid användning för att dokumentera kvaliteten av blodgasmätningen.",
+          "misuse" : "Används inte för mätning av pletysmografi. Använd en annan lämplig arketyp för det ändamålet.\r\n\r\nAnvänds inte för andra typer av mätningar, t.ex. pulsfrekvens, eftersom mätenheten också tillhandahåller informationen. För dessa används en separat arketyp som är lämplig för den specifika mätningen för att möjliggöra konsekventa förfrågningar. I det här exemplet registrerar du pulsfrekvensen i OBSERVATION.pulse arketypen.\r\n\r\nAnvänds inte för mätning av perifert blodgas som innebär direktkontakt med blod. PaO2, PaCO2 bör till exempel mätas med hjälp av OBSERVATION.laboratory_test_result arketypen.\r\n\r\nAnvänds inte för invasiv blodgasmätning, t.ex. arteriell (Sa02), venös (SvO2) syremättnad eller syreinnehåll (CaOC) som vanligtvis fastställs av invasiva metoder såsom laboratorieblodgaser eller vaskulära katetrar. De bör också mätas med arketypen OBSERVATION.laboratory_test_result.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record blood oxygen and related measurements, measured by pulse oximetry or pulse CO-oximetry.(en)",
+          "keywords" : [ "*oxygen(en)", "*oxygenation(en)", "*saturation(en)", "*SpO2(en)", "*spMet(en)", "*spCO(en)", "*spOC(en)", "*carboxyhaemoglobin(en)", "*methaemoglobin(en)", "*pulse(en)", "*oximeter(en)", "*oximetry(en)", "*concentration(en)", "*partial(en)", "*pressure(en)", "*non-invasive(en)", "*vital(en)", "*O2(en)", "*SaO₂(en)", "*SaO2(en)", "*sat(en)", "*sats(en)", "*hypoxaemia(en)" ],
+          "use" : "*Use to record blood oxygen and related measurements, measured by pulse oximetry or pulse CO-oximetry.\r\n\r\nWaveforms should be recorded here when used to document quality of the blood gas measurement.(en)",
+          "misuse" : "*Not used for other non-invasive blood gas measurements such as transcutaneous CO₂, lateral end-tidal CO₂ or non-invasive cerebral oximetry.\r\n\r\nNot to be used for recording plethysmography. Use another appropriate archetype for this purpose.\r\n\r\nNot to be used for recording another type of measurement, such as pulse rate, where the recording device also provides this. This should be recorded in a separate archetype, appropriate for that particular measurement to allow consistent querying. In this example, record the pulse rate in the OBSERVATION.pulse archetype.\r\n\r\nNot to be used to record any peripheral blood gas measurement that involves direct contact with blood. For example, PaO₂, PaCO₂ should be recorded using the OBSERVATION.laboratory_test_result archetype.\r\n\r\nNot to be used to record invasive blood gas measurement. For example, arterial (SaO₂), venous (SvO₂) oxygen saturation or Oxygen content (CaOC) which are usually determined by invasive methods such as laboratory blood gases or vascular catheter devices. These should also be recorded within the OBSERVATION.laboratory_test_result archetype.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para registrar la medición indirecta y habitualmente no invasiva de los gases en sangre tales como SpO2 y PtCO2, por medio de un oxímetro de pulso (o saturómetro de pulso), oximetría transcutánea u otros métodos.\r\n\r\nEs probable que este arquetipo será usado usado primariamente para registrar estimaciones de oxigenación, pero otras mediciones de gases pueden ser incluidas o agregadas en el futuro.",
+          "keywords" : [ "oxígeno", "oxigenación", "saturación", "SpO2", "ptcCO2", "ptcO2", "spMet", "spCO", "spOC", "carboxi-hemoglobina", "meta-hemoglobina", "transcutáneo", "pulso", "oxímetro", "oximetría", "saturómetro", "concentración", "parcial", "presión", "no invasivo", "vital", "O2", "CO2", "anhídrido carbónico", "dióxido de carbono" ],
+          "use" : "Usado para registrar la medición indirecta de gases en sangre, comúnmente por técnicas no invasivas. Nuevas mediciones indirectas de gases en sangres deberían ser incorporadas a este arquetipo.\r\n\r\nCuando el dispositivo de registro también provea otro tipo de medida, tal como la frecuencia del pulso, esto debe ser registrado en un arquetipo separado, adecuado para esa medida en particular. Ej. el arquetipo OBSERVATION.heart_rate-pulse, para permitir una consulta consistente.\r\n\r\nEl objetivo es modelar consistentemente un concepto clínico, más que la salida del modelo del dispositivo; los dispositivos son cada vez más multi-funcionales y proporcionan mediciones redundantes, que pueden requerir el registro por medio de arquetipos discretos.\r\n\r\nLas formas de onda deben ser registradas aquí cuando se utiliza para documentar la calidad de la medición de gases en sangre. Por el contrario, si se utiliza primariamente con fines diagnósticos (Ej. del gasto cardíaco), debe registrarse en el arquetipo OBSERVATION.heart_rate-pulse.",
+          "misuse" : "Cualquier medición de gases en sangre que involucra contacto directo con la sangre y la medición de la PaO2, PaCO2 no deberían ser registradas usando este arquetipo. Usar el arquetipo OBSERVATION.lab_test-blood_gases.v1. Mediciones directas de gases arteriales nuevas, deberían ser agregadas a OBSERVATION.lab_test-blood_gases.v1.\r\n\r\nNo usar para registrar medidas directas de gases en sangre. Ej. SaO2 (saturación arterial), SvO2 (saturación venosa) o CaO2 (contenido de Oxígeno), usualmente determinados por métodos invasivos. Ej. laboratorio de gases en sangre o dispositivos catheter vascular. Estos deberían ser registrados en el arquetipo OBSERVATION.lab_test-blood_gases.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere blodoksygen og beslektede målinger, målt ved pulsoksymetri eller puls-CO-oksymetri.",
+          "keywords" : [ "oksygen", "oksygenering", "saturasjon", "SpO2", "spMet", "spCO", "spCaO", "karbonmonoksid hemoglobin", "methemoglobin", "puls", "oksimetri", "oksimeter", "konsentrasjon", "partial", "trykk", "non-invasiv", "vital", "O2", "CO2", "karbondioksid", "oksimetri", "oksymetri", "metning", "oksygenmetning", "SaO2", "SaO₂", "hypoksemi" ],
+          "use" : "Brukes til å registrere blodoksygen og beslektede målinger, målt ved pulsoksymetri eller puls-CO-oksymetri.\r\n\r\nBølgeformer bør registreres her, når det benyttes til å dokumentere kvalitet på blodgassmåling.\r\n",
+          "misuse" : "Brukes ikke til å registrere andre non-invasive blodgassmålinger, som transkutan CO₂, sidestrøms endetidal CO₂ eller noninasiv cerebral oksymetri.\r\n\r\nBrukes ikke til å registrere pletysmografi. Bruk en annen passende arketype for dette formålet.\r\n\r\nBrukes ikke til å registrer andre typer målinger som for eksempel puls, der måleutstyret også angir disse. Dette dette registreres i en egen arketype som er passende for den aktuelle målingen, for å muliggjøre konsekvent spørring. I dette eksempelet registreres puls i OBSERVATION.pulse-arketypen. \r\n\r\nBrukes ikke til å registrere perifere blodgassmålinger som involverer direkte kontakt med blod. For eksempel bør PaO₂, PaCO₂ registreres i OBSERVATION.laboratory_test_result arketypen.\r\n\r\nBrukes ikke til å registrere invasiv blodgassmåling, for eksempel arteriell (SaO₂) eller venøs (SvO₂) oksygenmetning eller oksygeninnhold (CaOC) som vanligvis måles ved hjelp av invasive metoder. Bruk OBSERVATION.laboratory_test_result til dette formålet.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar medidas de oxigênio sanguíneo, medidas por oximetria de pulso ou por carbo-oximetria de pulso.\r\n",
+          "keywords" : [ "Oxigênio", "Oxigenação", "Saturação", "SpO2", "spMet(", "spCO", "spOC", "Carboxyhaemoglobina", "Methaemoglobina", "Pulso", "Oxímetro", "Oximetria", "Concentração", "Parcial", "Pressão", "Não invasivo", "Vital", "O2", "SaO₂", "SaO2", "sat", "sats", "Hipoxemia" ],
+          "use" : "Para gravar medidas de oxigênio sanguíneo, medidas por oximetria de pulso ou por carbo-oximetria de pulso.\r\nA forma das ondas podem ser usadas para documentar a qualidade das medidas de gases sanguíneos",
+          "misuse" : "Não deve ser usado para outras medidas não invasivas de gases sanguíneos, tais como CO₂ transcutâneo, CO₂ inalado ou oximetria cerebral não invasiva.\r\nNão dever ser usado para avaliar alterações de volume. Usar outro arquétipo apropriado para este fim.\r\nNão deve ser usado para obter outros tipos de medida, tais como medida de pulso uma vez que o processo de medida também oferce isso. Deveria ser obtido em um arquétipo separado, apropriado para esta medida particular para obter dados consistentes. No exemplo obtenha o pulso no aquétipo de observação de pulso.\r\nNão deve ser usado para qualquer medida de gases de sangue periférico que envolva contato direto com sangue, por exemplo PaO₂, PaCO₂, poderiam ser obtidos usando o arquétipo de observações de resultados de teste de laboratório.\r\nNão deve ser usado para obter medidas de gases sanguíneos invasivos. Por exemplo, saturação de oxigênio arterial (SaO₂), Venoso (SvO₂) ou conteúdo de oxigênio (CaOC) que geralmente são determinados por métodos invasivos, como gasometria de laboratório ou cateter vascular. Estes também devem ser registrados no arquétipo OBSERVATION.laboratory_test_result.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل قياسات غازات الدم غير المباشرة, بطريقة غير باضِعة, مثل تشبع الدم الطرفي بالأكسجين, و الضغط الجزئي للأكسجين في الدم الطرفي, عن طريق قياس تأكسج الدم عند النبض, أو قياس تأكسج الدم بطريق الجلد أو طرق أخرى.\r\n\r\nعادة ما يستخدم هذا النموذج لتسجيل تقديرات التأكسج, و لكن قياسات الغازات الأخرى قد يتم تضمينها أو تضاف مع الوقت.",
+          "keywords" : [ "الأكسجين", "التأكسج", "تشبع الدم الطرفي بالأكسجين", "الضغط الجزئي لثاني أكسيد الكربون في الدم الطرفي", "الضغط الجزئي لثاني أكسيد الكربون في الدم الطرفي", "تشبع الميثوكسيهيموغلوبين في الدم الطرفي", "تشبع الكاربوكسي هيموغلوبين في الدم الطرفي", "المحتوى الأكسجيني في الدم الطرفي", "التشبع", "كربوكسي هيموغلوبين", "الميتهيموغلوبين", "عن طريق الجلد", "النبض", "مقياس التأكسج", "قياس التأكسج", "التركيز", "جزئي", "الضغط", "غير باضع", "حيوي - حياتي", "الأكسجين", "ثاني أكسيد الكربون" ],
+          "use" : "يستخدم لتسجيل القياسات غير المباشرة لغازات الدم, باستخدام الطرق غير الباضعة. ينبغي أن يتم إضافة القياسات الجديدة لغازات الدم إلى هذا النموذج.\r\n\r\nكما تضيف الجهيزة المستخدمة طريقة أخرى للقياس, مثل سرعة النبض, و لكن ينبغي تسجيل ذلك في نموذج منفرد, يتناسب مع العلامة التي يتم قياسها, مثل: نموذج ملاحظة. القلب - معدل النبض, للسماح بالاستعلام عن البيانات بشكل متجانس.\r\n\r\nيهدف ذلك إلى وضع نموذج لمفهوم سريري, أكثر من كونه وضعا لنموذج نتاج (مُخرَج) جهيزة, حيث إن الجهائز عادة ما تكون متعددة الوظائف و تقوم بقياسات متراكبة قد تحتاج أن يتم تسجيلها في عدد من النماذج المنفردة.\r\n\r\nينبغي تسجيل التموجات في هذا النموذج عند استخدامها لتوثيق جودة قراءة غاز الدم. و على العكس, إذا استخدمت لأغراض تشخيصية أولية, مثل النتاج (المخرج) القلبي, و الـ \r\nplesmythography \r\nفينبغي تسجيلها باستخدام النموذج الجوهري: ملاحظة. القلب - معدل النبض.",
+          "misuse" : "لا ينبغي أن يستخدم هذا النموذج في قياس غازات الدم التي تتضمن تماس مباشر مع الدم, و قياس ضغط الأكسجين في الدم الشرياني, و ضغط ثاني أكسيد الكربون في الدم \r\nالشرياني, و ينبغي استخدام نموذج ملاحظة. الاختبار المعملي - غازات الدم, لذلك.\r\n\r\nينبغي إضافة القياسات المباشرة لغازات الدم لنموذج ملاحظة. الاختبار المعملي. غازات الدم.\r\n\r\nلا ينبغي أن يستخدم لقياس قياسات غازات الدم المباشرة, مثل تشبع الدم شرياني بالأكسجين و تشبع الدم الوريدي بالأكسجين, أو المحتوى الأكسجيني, التي يتم تحديدها باستخدام الطرق الباضعة, مثل استخدام الأجهزة المعملية لقياس غازات الدم أو القثطار الوريدي \r\nو ينبغي تسجيل هذه القياسات باستخدام نموذج ملاحظة. الاختبار المعملي. غازات الدم.\r\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record blood oxygen and related measurements, measured by pulse oximetry or pulse CO-oximetry.",
+          "keywords" : [ "oxygen", "oxygenation", "saturation", "SpO2", "spMet", "spCO", "spOC", "carboxyhaemoglobin", "methaemoglobin", "pulse", "oximeter", "oximetry", "concentration", "partial", "pressure", "non-invasive", "vital", "O2", "SaO₂", "SaO2", "sat", "sats", "hypoxaemia" ],
+          "use" : "Use to record blood oxygen and related measurements, measured by pulse oximetry or pulse CO-oximetry.\r\n\r\nWaveforms should be recorded here when used to document quality of the blood gas measurement.",
+          "misuse" : "Not used for other non-invasive blood gas measurements such as transcutaneous CO₂, lateral end-tidal CO₂ or non-invasive cerebral oximetry.\r\n\r\nNot to be used for recording plethysmography. Use another appropriate archetype for this purpose.\r\n\r\nNot to be used for recording another type of measurement, such as pulse rate, where the recording device also provides this. This should be recorded in a separate archetype, appropriate for that particular measurement to allow consistent querying. In this example, record the pulse rate in the OBSERVATION.pulse archetype.\r\n\r\nNot to be used to record any peripheral blood gas measurement that involves direct contact with blood. For example, PaO₂, PaCO₂ should be recorded using the OBSERVATION.laboratory_test_result archetype.\r\n\r\nNot to be used to record invasive blood gas measurement. For example, arterial (SaO₂), venous (SvO₂) oxygen saturation or Oxygen content (CaOC) which are usually determined by invasive methods such as laboratory blood gases or vascular catheter devices. These should also be recorded within the OBSERVATION.laboratory_test_result archetype.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fa" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fa"
+          },
+          "purpose" : "برای ثبت اندازه گیری گاز خون بطور غیر مستقیم ،در حال حاضر غیر تهاجمی و غیر مستقیم بکار می رود، نظیر ....و ... از طریق اندازه گیری اکسیژن نبضی ، اندازه گیری اکسیژن زیر پوستی یا سایر روشها \r\nاین احتمال بالاست که از این الگو ساز بطور اولیه در ثبت برآوردهای تولید اکسیژن استفاده شوداما سایر اندازه گیری های گاز ممکن است در طول زمان اضافه شود  .   ",
+          "keywords" : [ "اکسیژن", "تولید اکسیژن", "اشباع", "اشباع اکسیژن خون", "SpO2", "ptcCO2", "ptcO2", "spMet", "spCO", "spOC", "ترکیب مونو اکسید کربن و هموگلوبین در گلبولهای قرمز", "پروتیین حمل کننده اکسیژن در هموگلوبین", "زیر پوستی", "وسیله اندازه گیری اکسیژن خون", "روش اندازه گیری اکسیژن خون", "غلظت", "جزیی", "فشار", "غیر تهاجمی", "حیاتی", "O2", "CO2", "کربن دی اکسید" ],
+          "use" : "برای ثبت اندازه گیری غیر مستقیم گاز خون، که در حال حاضر با تکنیک های غیر تهاجمی انجام می شود، بکار می رود. داده های جدید اندازه گیری های غیر مستقیم گاز خون بایستی به این الگوساز افزوده شوند\r\n\r\nاز انجایی که وسایل ثبت انواع دیگری از اندازه گیری مانند میزان نبض را فراهم می کنند، بایستی در یک الگوساز جداگانه، مناسب با آن اندازه گیری مانند\r\nOBSERVATION.heart_rate-pulse\r\nبرای اجازه دادن به پرسجوی مشروط، ثبت شوند\r\n \r\nهدف همواره مدل کردن یک مفهوم بالینی به جای مدل کردن خروجی یک وسیله است\r\nوسایل چند کاره بوده و پیوسته قابلیت های آنها در حال افزایش است و اندازه گیری ها همپوشانی دارند که ممکن است نیاز شوند تا با بکارگیری یک تعداد از الگوساز های گسسته ثبت شوند\r\n\r\nشکل موج ها هنگامی که برای مستند کردن کیفیت اندازه گیری گاز خون استفاده می شوند بایستی در اینجا ثبت شوند. و در مقابل اگر برای اهداف تشخیصی اولیه مانند برونده قلبی بکار روند، \"پلسمیتوگرافی\" باید در الگوساز بالینی کلیدی مرتبط\r\nOBSERVATION.heart_rate-pulse\r\nثبت شود\r\n    ",
+          "misuse" : "هر گونه اندازه گیری گاز خون که شامل تماس مستقیم با خون و اندازه گیری .... و .... نباید با استفاده از این الگو ساز ثبت شود . ازالگو ساز ..... استفاده کنید . اندازه گیری جدید فشار خو.ن باید به ... اضافه شود\r\nنباید در ثبت اندازه گیری فشار گاز خون مستقیم استفاده شود به عنوان مثال .... ، .... اشباع اکسیژن یا محتوای اکسیژن .... که معمولا با روشهای غیر تهاجمی تعیین می شود.به عنوان مثال گازههای خونی آزمایشگاهی یا وسایل کاتتر عروقی . این موارد باید در الگو ساز ... ثبت شوند ",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pulse_oximetry.v1",
     "differential" : true,
@@ -4674,7 +5726,17 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_QUANTITY",
-                          "attributes" : [ ],
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "property",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "terminologyId" : {
+                                "value" : "openehr"
+                              },
+                              "constraint" : [ "119" ]
+                            } ]
+                          } ],
                           "attributeTuples" : [ {
                             "@type" : "C_ATTRIBUTE_TUPLE",
                             "members" : [ {
@@ -4744,6 +5806,7 @@
                             "children" : [ {
                               "@type" : "C_INTEGER",
                               "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
                               "constraint" : [ {
                                 "lower" : 2,
                                 "upper" : 2,
@@ -4794,6 +5857,7 @@
                             "children" : [ {
                               "@type" : "C_INTEGER",
                               "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
                               "constraint" : [ {
                                 "lower" : 2,
                                 "upper" : 2,
@@ -4853,6 +5917,56 @@
           } ],
           "attributeTuples" : [ ]
         } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0007",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0009.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0061.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.1" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
       } ],
       "attributeTuples" : [ ]
     },
@@ -4860,27 +5974,104 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "ar-sy" : { },
-        "es-ar" : { },
-        "de" : { },
-        "en" : { },
-        "fa" : { },
-        "ru" : { },
-        "nb" : { },
-        "sv" : { },
-        "pt-br" : { },
-        "fi" : { }
+        "ar-sy" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "es-ar" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "fa" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "ru" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "fi" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        }
       },
       "termBindings" : {
         "SNOMED-CT" : { },
         "LOINC" : {
           "at0044.1" : "term:LOINC::57800-5",
           "at0045.1" : "term:LOINC::86904-0",
-          "at0046.1" : "term:LOINC::2614-6"
+          "at0046.1" : "term:LOINC::2614-6",
+          "at0009.1" : "term:LOINC::20081-6"
         }
       },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0062", "at0063", "at0064" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "57b4482a-2398-40a8-8387-24fc7b955476",
@@ -5029,7 +6220,40 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "419859D1BF052C126FC989A7211A3648"
       },
-      "details" : { }
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere en sammensatt skåring, basert på kategoriserte fysiologiske målinger og observasjoner for å støtte vurderingen av klinisk forverring hos pasient over 16 år.",
+          "keywords" : [ "varsling", "triage", "NEWS", "sats", "MEWS", "TILT", "forverring" ],
+          "use" : "Brukes for å registrere en sammensatt skåring for å støtte vurderingen av klinisk forverring hos pasient over 16 år.",
+          "misuse" : "Anvendes ikke for registrering av hver enkelt fysiologisk parameter eller klinisk observasjon. Bruk spesifikke OBSERVATION-arketyper for dette formål - OBSERVATION.blood_pressure, OBSERVATION.pulse, OBSERVATION.respirations, OBSERVATION.body_temperature, OBSERVATION.avpu, CLUSTER.ambient_oxygen og OBSERVATION.indirect_oximetry.\r\n\r\nBenyttes ikke for barn under 16 år, bruk en egen arketype for dette formålet.\r\n\r\nBenyttes vanligvis ikke for gravide.",
+          "copyright" : "© Clinical Models UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To standardise the assessment of acute-illness severity; the detection of clinical deterioration; and the initiation of a timely and competent clinical response.",
+          "keywords" : [ "warning", "triage", "NEWS", "Sats", "EWS" ],
+          "use" : "Use to record six physiological parameters, a weighting score for supplemental oxygen and a composite total score to underpin:\r\n- the assessment of acute-illness severity; \r\n- the detection of clinical deterioration; and \r\n- the initiation of a timely and competent clinical response.",
+          "misuse" : "Not to be used to record actual measurements for each parameter. Use specific OBSERVATION archetypes for this purpose:\r\n- OBSERVATION.blood_pressure;\r\n- OBSERVATION.pulse;\r\n- OBSERVATION.respirations;\r\n- OBSERVATION.body_temperature;\r\n- OBSERVATION.avpu; and\r\n- OBSERVATION.indirect_oximetry.\r\n\r\nNot to be used for children/teens under the age of 16 years or in pregnancy.",
+          "copyright" : "© Clinical Models UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.news2.v0",
     "differential" : true,
@@ -5041,19 +6265,130 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "OBSERVATION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0002",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0056.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0044.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0041",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0043.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
-        "nb" : { }
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0057", "at0058", "at0059", "at0060" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "ddc21bba-881e-4538-8e99-29652b40d333",

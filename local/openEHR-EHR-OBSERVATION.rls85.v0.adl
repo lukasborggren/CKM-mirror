@@ -34,12 +34,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e17c4ef37f642791a5aa3d834ec6e424">
+		["MD5-CAM-1.0.1"] = <"42d74638634b22857c845a739dba8fb4">
 		["build_uid"] = <"8ab6491f-5863-3c15-85fa-e322c71f9ad6">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- RLS85
+	OBSERVATION[at0000] matches {    -- RLS-85
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {0..*; unordered} matches {
@@ -78,9 +78,9 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"RLS85">
+					text = <"RLS-85">
 					description = <"Swedish classification model for assessment of the level of consciousness.  Internationally, Glasgow Coma Scale is used in a similar manner, differentiating in how the patient's status is assessed.">
-					comment = <"Abbreviation for Reaction Level Scale, from 1985 (RLS - 85).">
+					comment = <"Abbreviation for Reaction Level Scale, from 1985 (RLS-85).">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -135,9 +135,9 @@ ontology
 		["sv"] = <
 			items = <
 				["at0000"] = <
-					text = <"RLS85">
+					text = <"RLS-85">
 					description = <"Svensk klassificeringsmodell för bedömning av medvetandegraden. Internationellt används Glasgow Coma Scale på ett liknande sätt, som skiljer sig åt i hur patientens status bedöms.">
-					comment = <"Förkortning för Reaction Level Scale, från 1985 (RLS - 85).">
+					comment = <"Förkortning för Reaction Level Scale, från 1985 (RLS-85).">
 				>
 				["at0001"] = <
 					text = <"History">

@@ -6,6 +6,13 @@ concept
 
 language
 	original_language = <[ISO_639-1::sv]>
+	translations = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,6 +23,10 @@ description
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -23,8 +34,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ca4408e25bff866daf544331cefe0624">
 		["build_uid"] = <"60c61158-6189-33e5-82b9-cc2c57094198">
+		["MD5-CAM-1.0.1"] = <"2ba88ae63480ac6eba1c9d3ec97cfb2e">
 	>
 
 definition
@@ -120,6 +131,66 @@ ontology
 				["at0012"] = <
 					text = <"8">
 					description = <"Medvetslös. Ingen smärtreaktion.">
+				>
+				["at0014"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"*RLS (sv)">
+					description = <"*RLS (sv)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (sv)">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Observation (sv)">
+					description = <"*Reaction Level Scale. Klassificering av graden av medvetande eller medvetslöshet hos patient. (sv)">
+				>
+				["at0005"] = <
+					text = <"*1 (sv)">
+					description = <"*Vaken. Orienterad, ingen svarslatens. (sv)">
+				>
+				["at0006"] = <
+					text = <"*2 (sv)">
+					description = <"*Slö/oklar. Kontaktbar vid lätt stimulering (tilltal, beröring). (sv)">
+				>
+				["at0007"] = <
+					text = <"*3 (sv)">
+					description = <"*Mycket slö/oklar. Kontaktbar vid kraftig stimulering. (sv)">
+				>
+				["at0008"] = <
+					text = <"*4 (sv)">
+					description = <"*Medvetslös. Lokaliserar smärta utan att avvärja. (sv)">
+				>
+				["at0009"] = <
+					text = <"*5 (sv)">
+					description = <"*Medvetslös. Undandragande rörelser vid smärtstimuli. (sv)">
+				>
+				["at0010"] = <
+					text = <"*6 (sv)">
+					description = <"*Medvetslös. Stereotypa böjrörelser vid smärtstimuli. (sv)">
+				>
+				["at0011"] = <
+					text = <"*7 (sv)">
+					description = <"*Medvetslös. Stereotypa sträckrörelser vid smärtstimul (sv)">
+				>
+				["at0012"] = <
+					text = <"*8 (sv)">
+					description = <"*Medvetslös. Ingen smärtreaktion. (sv)">
 				>
 				["at0014"] = <
 					text = <"Item tree">

@@ -1,0 +1,130 @@
+archetype (adl_version=1.4; uid=e158cb57-fba0-4630-8f6d-399882e4478b)
+	openEHR-EHR-OBSERVATION.rls.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::sv]>
+
+description
+	original_author = <
+		["date"] = <"2019-11-08">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ca4408e25bff866daf544331cefe0624">
+		["build_uid"] = <"60c61158-6189-33e5-82b9-cc2c57094198">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- RLS
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {0..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Observation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- 1
+													at0006,    -- 2
+													at0007,    -- 3
+													at0008,    -- 4
+													at0009,    -- 5
+													at0010,    -- 6
+													at0011,    -- 7
+													at0012]    -- 8
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0014] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["sv"] = <
+			items = <
+				["at0000"] = <
+					text = <"RLS">
+					description = <"RLS">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Observation">
+					description = <"Reaction Level Scale. Klassificering av graden av medvetande eller medvetslöshet hos patient.">
+				>
+				["at0005"] = <
+					text = <"1">
+					description = <"Vaken. Orienterad, ingen svarslatens.">
+				>
+				["at0006"] = <
+					text = <"2">
+					description = <"Slö/oklar. Kontaktbar vid lätt stimulering (tilltal, beröring).">
+				>
+				["at0007"] = <
+					text = <"3">
+					description = <"Mycket slö/oklar. Kontaktbar vid kraftig stimulering.">
+				>
+				["at0008"] = <
+					text = <"4">
+					description = <"Medvetslös. Lokaliserar smärta utan att avvärja.">
+				>
+				["at0009"] = <
+					text = <"5">
+					description = <"Medvetslös. Undandragande rörelser vid smärtstimuli.">
+				>
+				["at0010"] = <
+					text = <"6">
+					description = <"Medvetslös. Stereotypa böjrörelser vid smärtstimuli.">
+				>
+				["at0011"] = <
+					text = <"7">
+					description = <"Medvetslös. Stereotypa sträckrörelser vid smärtstimul">
+				>
+				["at0012"] = <
+					text = <"8">
+					description = <"Medvetslös. Ingen smärtreaktion.">
+				>
+				["at0014"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>

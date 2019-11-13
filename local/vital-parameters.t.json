@@ -186,10 +186,46 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..*",
+        "nodeId" : "at0.28",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-respiration-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0.31",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-pulse_oximetry-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
         "nodeId" : "at0.4",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-blood_pressure-001.v2",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0.35",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-avpu-c-002.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0.37",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-rls85-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -204,15 +240,6 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..*",
-        "nodeId" : "at0.8",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-respiration-001.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..*",
         "nodeId" : "at0.12",
         "attributes" : [ ],
         "attributeTuples" : [ ],
@@ -222,37 +249,10 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..*",
-        "nodeId" : "at0.16",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-pulse_oximetry-001.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..*",
-        "nodeId" : "at0.22",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-rls85-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..*",
         "nodeId" : "at0.24",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-news2-002.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..*",
-        "nodeId" : "at0.26",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-avpu-c-002.v0",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -5747,6 +5747,53 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0006.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_PROPORTION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "numerator",
+                            "children" : [ {
+                              "@type" : "C_REAL",
+                              "rmTypeName" : "Real",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 0.0,
+                                "upper" : 100.0,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "upperUnbounded" : false,
+                                "lowerUnbounded" : false
+                              } ]
+                            } ]
+                          }, {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "type",
+                            "children" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "Integer",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 2,
+                                "upper" : 2,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "upperUnbounded" : false,
+                                "lowerUnbounded" : false
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0044.1",
                       "attributes" : [ {
@@ -6064,6 +6111,26 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "at0058.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0058.1",
+            "text" : "Tolkning",
+            "description" : "*Single word, phrase or brief description which represents the clinical meaning and significance of the measurements.(en)",
+            "comment" : "*Coding with a terminology is preferred, if possible. For example, normal oxygen saturation or hypoxaemia.(en)"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Pulsoximetri",
+            "description" : "*Blood oxygen and related measurements, measured by pulse oximetry or pulse CO-oximetry.(en)"
+          },
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "SpO₂",
+            "description" : "*The saturation of oxygen in the peripheral blood, measured via pulse oximetry.(en)",
+            "comment" : "*SpO₂ is defined as the percentage of oxyhaemoglobin (HbO₂) to the total concentration of haemoglobin (HbO₂ + deoxyhaemoglobin) in peripheral blood.(en)"
           }
         },
         "pt-br" : {
@@ -6084,12 +6151,15 @@
         }
       },
       "termBindings" : {
-        "SNOMED-CT" : { },
+        "SNOMED-CT" : {
+          "at0006.1" : "term:SNOMED-CT::431314004"
+        },
         "LOINC" : {
           "at0044.1" : "term:LOINC::57800-5",
           "at0045.1" : "term:LOINC::86904-0",
           "at0046.1" : "term:LOINC::2614-6",
-          "at0009.1" : "term:LOINC::20081-6"
+          "at0009.1" : "term:LOINC::20081-6",
+          "at0006.1" : "term:LOINC::59408-5"
         }
       },
       "terminologyExtracts" : { },
@@ -6336,7 +6406,55 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "081734B58C9970EA7A46F24CE14A5E4C"
       },
-      "details" : { }
+      "details" : {
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "*Att ge en objektiv indikation om försämring av patientens kliniska status.",
+          "keywords" : [ ],
+          "use" : "Att bedöma och registrera en poängsumma som är baserad på kategorisering av 6 fysiologiska mätvärden,... :\r\n- \r\n- försämring av den kliniska statusen\r\n- \r\n",
+          "misuse" : "*Not to be used to record actual measurements for each parameter. Use specific OBSERVATION archetypes for this purpose:\r\n- OBSERVATION.blood_pressure;\r\n- OBSERVATION.pulse;\r\n- OBSERVATION.respirations;\r\n- OBSERVATION.body_temperature;\r\n- OBSERVATION.avpu; and\r\n- OBSERVATION.indirect_oximetry.\r\n\r\nNot to be used for children/teens under the age of 16 years or in pregnancy.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere en sammensatt skåring, basert på kategoriserte fysiologiske målinger og observasjoner for å støtte vurderingen av klinisk forverring hos pasient over 16 år.",
+          "keywords" : [ "varsling", "triage", "NEWS", "sats", "MEWS", "TILT", "forverring" ],
+          "use" : "Brukes for å registrere en sammensatt skåring for å støtte vurderingen av klinisk forverring hos pasient over 16 år.",
+          "misuse" : "Anvendes ikke for registrering av hver enkelt fysiologisk parameter eller klinisk observasjon. Bruk spesifikke OBSERVATION-arketyper for dette formål - OBSERVATION.blood_pressure, OBSERVATION.pulse, OBSERVATION.respirations, OBSERVATION.body_temperature, OBSERVATION.avpu, CLUSTER.ambient_oxygen og OBSERVATION.indirect_oximetry.\r\n\r\nBenyttes ikke for barn under 16 år, bruk en egen arketype for dette formålet.\r\n\r\nBenyttes vanligvis ikke for gravide.",
+          "copyright" : "© Clinical Models UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To standardise the assessment of acute-illness severity; the detection of clinical deterioration; and the initiation of a timely and competent clinical response.",
+          "keywords" : [ "warning", "triage", "NEWS", "Sats", "EWS" ],
+          "use" : "Use to record six physiological parameters, a weighting score for supplemental oxygen and a composite total score to underpin:\r\n- the assessment of acute-illness severity; \r\n- the detection of clinical deterioration; and \r\n- the initiation of a timely and competent clinical response.",
+          "misuse" : "Not to be used to record actual measurements for each parameter. Use specific OBSERVATION archetypes for this purpose:\r\n- OBSERVATION.blood_pressure;\r\n- OBSERVATION.pulse;\r\n- OBSERVATION.respirations;\r\n- OBSERVATION.body_temperature;\r\n- OBSERVATION.avpu; and\r\n- OBSERVATION.indirect_oximetry.\r\n\r\nNot to be used for children/teens under the age of 16 years or in pregnancy.",
+          "copyright" : "© Clinical Models UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.news2.v0",
     "differential" : true,
@@ -6530,6 +6648,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : "*"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "NEWS2",
+            "description" : "*Standardised assessment score used to improve the detection of and response to clinical deterioration in patients with acute illness. This is the second version of the National Early Warning Score, issued by the UK Royal College of Physicians in 2017.(en)"
           }
         }
       },
@@ -6596,7 +6720,67 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "185DE4795C557CE817101AC79F613937"
       },
-      "details" : { }
+      "details" : {
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera en individs medvetandegrad.",
+          "keywords" : [ "*avpu(en)", "*alert(en)", "*voice(en)", "*pain(en)", "*unresponsive(en)", "*awake(en)", "*speech(en)", "*pain(en)", "*unconscious(en)", "*voice(en)", "*consciousness(en)", "*verbal(en)", "*verbal response(en)", "*semicomatose(en)", "*conscious(en)", "*level of consciousness(en)", "*comatose(en)", "*confusion(en)", "*acvpu(en)" ],
+          "use" : "Används för att registrera en snabb och enkel bedömning av en individs medvetandegrad, i synnerhet i akuta situationer. Bedömningen har uppdaterats som en konsekvens av publiceringen av NEWS2 år 2017.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Brukes for å vurdere et individs bevissthetsnivå.",
+          "keywords" : [ "AVPU", "alert", "voice", "pain", "unresponsive", "våken", "tale", "smerte", "bevisstløs", "stemme", "bevissthet", "verbal", "verbalrespons", "semikomatøs", "bevisst", "bevissthetsnivå", "komatøs" ],
+          "use" : "For raskt og enkel vurdering av et individs bevissthetsnivå, særlig egnet til vurdering i akutte situasjoner. Denne vurderingen har blitt oppdatert i 2017 som følge av endringer NEWS skåringsverktøyet. Verktøyet er nå publisert som NEWS 2.",
+          "copyright" : "© Apperta UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar a responsividade de um paciente, como uma indicação do seu nível de consciência.",
+          "keywords" : [ "avda", "alerta", "voz", "dor", "arresponsivo" ],
+          "use" : "Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.",
+          "copyright" : "© Apperta UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record an individual's level of consciousness.",
+          "keywords" : [ "avpu", "alert", "voice", "pain", "unresponsive", "awake", "speech", "pain", "unconscious", "voice", "consciousness", "verbal", "verbal response", "semicomatose", "conscious", "level of consciousness", "comatose", "confusion", "acvpu" ],
+          "use" : "Use to record a quick and simple assessment of an individual's level of consciousness, especially in an emergency situation. This assessment has been updated in response to 2017 changes to the NEWS assessment, now published as NEWS2.",
+          "copyright" : "© Apperta UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.avpu-c.v0",
     "differential" : true,
@@ -6709,7 +6893,95 @@
             "comment" : "*ACVPU is an acronym for 'Alert', 'Confusion', 'Voice', 'Pain', 'Unresponsive'.(en)"
           }
         },
-        "sv" : { }
+        "sv" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "AVPU",
+            "description" : "Simple scale used as part of an assessment to measure and record an individual's level of consciousness. AVPU is an acronym for 'Alert', 'Voice', 'Pain', 'Unresponsive'."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Any event",
+            "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Observation",
+            "description" : "The observation of the patient's level of consciousness."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Alert",
+            "description" : "Eyes open spontaneously, oriented speech, obeys commands."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Voice",
+            "description" : "Any verbal, motor or eye response to a voice stimulus."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Pain",
+            "description" : "Any verbal, motor or eye response to a pain stimulus, such as pressing the nail root, but not to voice stimulus."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "Unresponsive",
+            "description" : "No response to voice or pain stimuli."
+          },
+          "at0010" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010",
+            "text" : "Pain stimulus",
+            "description" : "Description of the type of pain stimulus used to elicit the observation.",
+            "comment" : "This element should be coded with a terminology, where possible. For example: pressing the nail root or the sternum."
+          },
+          "at0011" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0011",
+            "text" : "Extension",
+            "description" : "Additional information required to capture local content or to align with other reference models/formalisms.",
+            "comment" : "e.g. Local information requirements or additional metadata to align with FHIR or CIMI equivalents."
+          },
+          "at0012" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Comment",
+            "description" : "Additional narrative about the observation, not captured in other fields."
+          },
+          "at0014" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Confounding factors",
+            "description" : "Narrative description of any issues or factors that may impact on the observation."
+          },
+          "at0014.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014",
+            "text" : "Confounding factors",
+            "description" : "Narrative description of any issues or factors that may impact on the observation."
+          },
+          "at0012.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012",
+            "text" : "Comment",
+            "description" : "Additional narrative about the observation, not captured in other fields."
+          },
+          "at0010.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0010",
+            "text" : "Pain stimulus",
+            "description" : "Description of the type of pain stimulus used to elicit the observation.",
+            "comment" : "This element should be coded with a terminology, where possible. For example: pressing the nail root or the sternum."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -6782,7 +7054,84 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "FC69F4776269F4C9A11CDB3E9B1A7EA6"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : {
+            "notes" : "Generated automatically by Adl Designer"
+          }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera mängden syre i den luft som patienten andas in vid observationstillfället, eller mängden syre som ska tillföras, ifall det är en del av en ordination.",
+          "keywords" : [ "*breathing(en)", "*oxygen(en)", "*air(en)", "*respiration(en)", "*flow rate(en)", "*therapy(en)", "*O2(en)", "*O₂(en)", "*PaO2(en)", "*FiO2(en)" ],
+          "use" : "Används i en INSTRUCTION-arektyp för att ordinera syre, i en ACTION-arketyp för att registrera genomförd syrebehandling, eller i en OBSERVATION-arketyp såsom Blodgas eller Andning, som del av patientens tillstånd, där kunskap om omgivande syrestatus är kritisk för tolkning av observationen.",
+          "misuse" : "Ska inte användas för inhalationsgaser såsom kväveoxid.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For registrering av andel oksygen tilgjengelig i den luften pasienten innånder på observasjonstidspunktet, eller mengden oksygen som skal gis dersom registreringen er del av en forordning.",
+          "keywords" : [ "pusting", "respirasjon", "luft", "oksygen", "O2", "innpust", "inspirasjon", "FiO2", "oksygentilførsel", "ånding", "O₂", "PaO2" ],
+          "use" : "Brukes i en INSTRUCTION-arketype for å spesifisere en oksygenforordning, i en ACTION-arketype for å dokumentere oksygenterapi utført, eller i en OBSERVATION-arketype, som for eksempel \"Oksimetri\" eller \"Åndedrett\" som en del av pasientstatus, hvor kunnskap om eventuell oksygentilførsel er kritisk for tolking av observasjonen.\r\n\r\nSLOT'et \"Detaljer om administrasjonsmåte\" kan bli brukt til å legge til ytterligere strukturert informasjon om administrasjon av oksygen, for eksempel om det er med luftfukting eller mekanisk ventilering. Dette vil være relevant om det er en OBSERVATION-arketype på toppnivå der denne arketypen er nøstet, for eksempel OBSERVATION.indirect_oximetry. I andre brukstilfeller, der oksygentilførsel i seg selv er konseptet, for eksempel i en arketype som omhandler respiratorbehandling, vil denne arketypen være nyttig for å registrere mengden oksygen individet får tilført.\r\n\r\nBrukes også i kalkulasjoner av FiO₂/PaO₂-ratio i tillegg til andre algoritmer, som for eksempel oksygenekstrasjonsratio, etc.\r\n\r\nAtmosfærisk trykk er antatt å være tilsvarende som ved havoverflaten, dersom det ikke er nærmere angitt.\r\n\r\nHvis det ikke er angitt nærmere og ingen ekstra oksygentilførsel er gitt, kan det antas at individet er i omgivelser der det er 21% O₂, FiO₂ er 0.21.\r\n\r\nSelv om konseptnavnet i denne arketypen er \"Innåndet oksygen\" betyr det ikke at individet nødvendigvis puster inn den mengden oksygen/oksygenblanding som er ordinert eller gitt. \r\n For eksempel kan det være rapportert i kliniske journaler at \"pasienten får 3 liter O₂ på nesekateter\". Den faktisk innpustede oksygenblandingen vil variere med administrasjonsmåte eller andre utenomforliggende faktorer, for eksempel om individet puster overfladisk eller til stadighet fjerner nesekateter.",
+          "misuse" : "Skal ikke brukes for andre innpustede gasser, som for eksempel nitrogenoksid.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para registrar la cantidad de oxígeno administrada al sujeto en el momento de la observación. Se asumen valores de 21% de O2, FiO2 de 0,21 y velocidad de flujo de oxígeno de cero.",
+          "keywords" : [ "respirando", "oxígeno", "ambiental", "FiO2" ],
+          "use" : "Puede ser usado dentro de un arquetipo ACTION para especificar oxígenoterapia o dentro de arquetipos OBSERVATION tales como Gases arteriales o Respiraciones, como parte del estado del paciente, donde el conocimiento de la concentración de oxígeno ambiental es crítica para la interpretación de la observación.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the amount of oxygen available in the air the subject inspires at the time of observation, or the amount of oxygen that is to be delivered, if part of an order.",
+          "keywords" : [ "breathing", "oxygen", "air", "respiration", "flow rate", "therapy", "O2", "O₂", "PaO2", "FiO2" ],
+          "use" : "Use within an INSTRUCTION archetype to specify an order of oxygen, in an ACTION archetype to record performed oxygen therapy, or within OBSERVATION archetypes such as Blood gases or Respirations, as part of patient state, where knowledge of ambient oxygen status is critical to interpretation of the observation.\r\n\r\nThe SLOT 'Oxygen delivery detail' can be used to specify additional structured information on the oxygen delivery, for example humidification or assisted ventilation. This will be relevant when there is an OBSERVATION archetype at top level, where this archetype is nested, for example OBSERVATION.indirect_oximetry. In other use cases, where the oxygen delivery itself is the concept, for example an archetype about mechanical ventilation, this archetype will be useful to record the amount of oxygen the individual is recieving.\r\n\r\nAlso use in calculation of FiO₂/PaO₂ ratio, in addition to other algorithms in intensive care medicine, for example oxygen extraction ratio, etc.\r\n\r\nAtmospheric pressure is assumed to equivalent to sea-level pressure, unless otherwise specified.\r\n\r\nWhere not specifically recorded values of 21% O₂, FiO₂ of 0.21 and oxygen flow rate of zero may be assumed.\r\n\r\n'Inspired oxygen' implies the amount of oxygen that was ordered or actioned, and normally reported in clinical records e.g.' the patient is on 30% Oxygen' and is not intended to capture the actual 'physiological' amount of oxygen that the patient receives, which will vary depending on the delivery method and other external conditions, such as whether the individual is breathing shallowly or is frequently removing the nasal prongs.",
+          "misuse" : "Do not use for other inhaled gases such as nitrous oxide.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.inspired_oxygen.v1",
     "differential" : true,
@@ -6935,6 +7284,7 @@
                 "children" : [ {
                   "@type" : "C_INTEGER",
                   "rmTypeName" : "INTEGER",
+                  "occurrences" : "1..1",
                   "constraint" : [ {
                     "lower" : 1,
                     "upper" : 1,
@@ -6985,6 +7335,7 @@
                 "children" : [ {
                   "@type" : "C_INTEGER",
                   "rmTypeName" : "INTEGER",
+                  "occurrences" : "1..1",
                   "constraint" : [ {
                     "lower" : 2,
                     "upper" : 2,

@@ -231,28 +231,28 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..*",
-        "nodeId" : "at0.18",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-news2-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..*",
-        "nodeId" : "at0.20",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-avpu-c-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..*",
         "nodeId" : "at0.22",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-rls85-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0.24",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-news2-002.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0.26",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-avpu-c-002.v0",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -682,10 +682,10 @@
                                 "constraint" : [ {
                                   "lower" : 0.0,
                                   "upper" : 1000.0,
-                                  "lowerUnbounded" : true,
-                                  "upperUnbounded" : true,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : false
+                                  "upperIncluded" : false,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               }, {
                                 "@type" : "C_INTEGER",
@@ -693,10 +693,10 @@
                                 "constraint" : [ {
                                   "lower" : 0,
                                   "upper" : 0,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : true
+                                  "upperIncluded" : true,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               } ]
                             } ]
@@ -753,10 +753,10 @@
                                 "constraint" : [ {
                                   "lower" : 0.0,
                                   "upper" : 1000.0,
-                                  "lowerUnbounded" : true,
-                                  "upperUnbounded" : true,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : false
+                                  "upperIncluded" : false,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               }, {
                                 "@type" : "C_INTEGER",
@@ -764,10 +764,10 @@
                                 "constraint" : [ {
                                   "lower" : 0,
                                   "upper" : 0,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : true
+                                  "upperIncluded" : true,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               } ]
                             } ]
@@ -917,10 +917,10 @@
                                 "constraint" : [ {
                                   "lower" : -90.0,
                                   "upper" : 90.0,
-                                  "lowerUnbounded" : true,
-                                  "upperUnbounded" : true,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : true
+                                  "upperIncluded" : true,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               }, {
                                 "@type" : "C_INTEGER",
@@ -928,10 +928,10 @@
                                 "constraint" : [ {
                                   "lower" : 0,
                                   "upper" : 0,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : true
+                                  "upperIncluded" : true,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               } ]
                             } ]
@@ -987,10 +987,10 @@
                       "constraint" : [ {
                         "lower" : "PT24H",
                         "upper" : "PT24H",
-                        "lowerUnbounded" : false,
-                        "upperUnbounded" : false,
                         "lowerIncluded" : true,
-                        "upperIncluded" : true
+                        "upperIncluded" : true,
+                        "upperUnbounded" : false,
+                        "lowerUnbounded" : false
                       } ]
                     } ]
                   } ],
@@ -2414,10 +2414,10 @@
                               "occurrences" : "1..1",
                               "constraint" : [ {
                                 "lower" : 1,
-                                "lowerUnbounded" : true,
-                                "upperUnbounded" : false,
                                 "lowerIncluded" : true,
-                                "upperIncluded" : false
+                                "upperIncluded" : false,
+                                "upperUnbounded" : true,
+                                "lowerUnbounded" : false
                               } ]
                             } ]
                           } ],
@@ -3960,10 +3960,10 @@
                                 "constraint" : [ {
                                   "lower" : 0.0,
                                   "upper" : 1000.0,
-                                  "lowerUnbounded" : true,
-                                  "upperUnbounded" : true,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : false
+                                  "upperIncluded" : false,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               }, {
                                 "@type" : "C_INTEGER",
@@ -3971,10 +3971,10 @@
                                 "constraint" : [ {
                                   "lower" : 0,
                                   "upper" : 0,
-                                  "lowerUnbounded" : false,
-                                  "upperUnbounded" : false,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : true
+                                  "upperIncluded" : true,
+                                  "upperUnbounded" : false,
+                                  "lowerUnbounded" : false
                                 } ]
                               } ]
                             } ]
@@ -5788,10 +5788,10 @@
                                 "rmTypeName" : "REAL",
                                 "constraint" : [ {
                                   "lower" : 0.0,
-                                  "lowerUnbounded" : true,
-                                  "upperUnbounded" : false,
                                   "lowerIncluded" : true,
-                                  "upperIncluded" : false
+                                  "upperIncluded" : false,
+                                  "upperUnbounded" : true,
+                                  "lowerUnbounded" : false
                                 } ]
                               } ]
                             } ]
@@ -5823,10 +5823,10 @@
                               "constraint" : [ {
                                 "lower" : 0.0,
                                 "upper" : 100.0,
-                                "lowerUnbounded" : true,
-                                "upperUnbounded" : true,
                                 "lowerIncluded" : true,
-                                "upperIncluded" : true
+                                "upperIncluded" : true,
+                                "upperUnbounded" : false,
+                                "lowerUnbounded" : false
                               } ]
                             } ]
                           }, {
@@ -5839,10 +5839,10 @@
                               "constraint" : [ {
                                 "lower" : 2,
                                 "upper" : 2,
-                                "lowerUnbounded" : false,
-                                "upperUnbounded" : false,
                                 "lowerIncluded" : true,
-                                "upperIncluded" : true
+                                "upperIncluded" : true,
+                                "upperUnbounded" : false,
+                                "lowerUnbounded" : false
                               } ]
                             } ]
                           } ],
@@ -5874,10 +5874,10 @@
                               "constraint" : [ {
                                 "lower" : 0.0,
                                 "upper" : 100.0,
-                                "lowerUnbounded" : true,
-                                "upperUnbounded" : true,
                                 "lowerIncluded" : true,
-                                "upperIncluded" : true
+                                "upperIncluded" : true,
+                                "upperUnbounded" : false,
+                                "lowerUnbounded" : false
                               } ]
                             } ]
                           }, {
@@ -5890,10 +5890,10 @@
                               "constraint" : [ {
                                 "lower" : 2,
                                 "upper" : 2,
-                                "lowerUnbounded" : false,
-                                "upperUnbounded" : false,
                                 "lowerIncluded" : true,
-                                "upperIncluded" : true
+                                "upperIncluded" : true,
+                                "upperUnbounded" : false,
+                                "lowerUnbounded" : false
                               } ]
                             } ]
                           } ],
@@ -6237,7 +6237,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "380268b9-378f-4ec5-87b3-07ac0150f4d7",
+    "uid" : "de90ea80-8dcb-4f5f-865b-81f4f4bf1889",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -6246,22 +6246,19 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "419859D1BF052C126FC989A7211A3648"
+        "PARENT:MD5-CAM-1.0.1" : "42d74638634b22857c845a739dba8fb4"
       },
       "details" : {
-        "nb" : {
+        "sv" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
           "language" : {
             "terminologyId" : {
               "value" : "ISO_639-1"
             },
-            "codeString" : "nb"
+            "codeString" : "sv"
           },
-          "purpose" : "For å registrere en sammensatt skåring, basert på kategoriserte fysiologiske målinger og observasjoner for å støtte vurderingen av klinisk forverring hos pasient over 16 år.",
-          "keywords" : [ "varsling", "triage", "NEWS", "sats", "MEWS", "TILT", "forverring" ],
-          "use" : "Brukes for å registrere en sammensatt skåring for å støtte vurderingen av klinisk forverring hos pasient over 16 år.",
-          "misuse" : "Anvendes ikke for registrering av hver enkelt fysiologisk parameter eller klinisk observasjon. Bruk spesifikke OBSERVATION-arketyper for dette formål - OBSERVATION.blood_pressure, OBSERVATION.pulse, OBSERVATION.respirations, OBSERVATION.body_temperature, OBSERVATION.avpu, CLUSTER.ambient_oxygen og OBSERVATION.indirect_oximetry.\r\n\r\nBenyttes ikke for barn under 16 år, bruk en egen arketype for dette formålet.\r\n\r\nBenyttes vanligvis ikke for gravide.",
-          "copyright" : "© Clinical Models UK, openEHR Foundation",
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
         },
@@ -6273,21 +6270,79 @@
             },
             "codeString" : "en"
           },
-          "purpose" : "To standardise the assessment of acute-illness severity; the detection of clinical deterioration; and the initiation of a timely and competent clinical response.",
-          "keywords" : [ "warning", "triage", "NEWS", "Sats", "EWS" ],
-          "use" : "Use to record six physiological parameters, a weighting score for supplemental oxygen and a composite total score to underpin:\r\n- the assessment of acute-illness severity; \r\n- the detection of clinical deterioration; and \r\n- the initiation of a timely and competent clinical response.",
-          "misuse" : "Not to be used to record actual measurements for each parameter. Use specific OBSERVATION archetypes for this purpose:\r\n- OBSERVATION.blood_pressure;\r\n- OBSERVATION.pulse;\r\n- OBSERVATION.respirations;\r\n- OBSERVATION.body_temperature;\r\n- OBSERVATION.avpu; and\r\n- OBSERVATION.indirect_oximetry.\r\n\r\nNot to be used for children/teens under the age of 16 years or in pregnancy.",
-          "copyright" : "© Clinical Models UK, openEHR Foundation",
+          "keywords" : [ ],
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
       }
     },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.rls85.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-rls85-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "8ab6491f-5863-3c15-85fa-e322c71f9ad6",
+    "rmName" : "openehr",
+    "rmRelease" : "1.0.3",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "85179ffe-8d24-4537-b439-d8396100cb65",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "081734B58C9970EA7A46F24CE14A5E4C"
+      },
+      "details" : { }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.news2.v0",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-news2-001.v0"
+      "value" : "openEHR-EHR-OBSERVATION.ovl-news2-002.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -6318,6 +6373,62 @@
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "items",
                     "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0006.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0029.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0047.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0034.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0008.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0007.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
@@ -6400,6 +6511,20 @@
           }
         },
         "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "NEWS (2)",
+            "description" : "NEWS (National Early Warning Score) er et skåringsverktøy som benyttes for å gi en objektiv vurdering av grad av klinisk forverring hos en pasient. Denne versjonen følger retningslinjer utgitt av the UK Royal College of Physicians."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : "*"
+          }
+        },
+        "sv" : {
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -6419,7 +6544,7 @@
       }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "ddc21bba-881e-4538-8e99-29652b40d333",
+    "buildUid" : "b698e505-f6ab-4151-a560-b426a4ce9613",
     "rmName" : "openehr",
     "rmRelease" : "1.0.3",
     "generated" : true,
@@ -6436,6 +6561,20 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult",
+        "organisation" : "Region Östergötland",
+        "email" : "asa.skagerhult@regionostergotland.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
         "codeString" : "nb"
       },
       "author" : {
@@ -6446,7 +6585,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "e91312b6-2a1d-4d6f-950b-d175f998edcf",
+    "uid" : "82afec48-c76d-403d-b220-035fc948709d",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -6455,61 +6594,15 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0670284BA5C4511A5C05CE50F0F30188"
+        "PARENT:MD5-CAM-1.0.1" : "185DE4795C557CE817101AC79F613937"
       },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Brukes for å vurdere et individs bevissthetsnivå.",
-          "keywords" : [ "AVPU", "alert", "voice", "pain", "unresponsive", "våken", "tale", "smerte", "bevisstløs", "stemme", "bevissthet", "verbal", "verbalrespons", "semikomatøs", "bevisst", "bevissthetsnivå", "komatøs" ],
-          "use" : "For raskt og enkel vurdering av et individs bevissthetsnivå, særlig egnet til vurdering i akutte situasjoner.",
-          "copyright" : "© Apperta UK, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Registrar a responsividade de um paciente, como uma indicação do seu nível de consciência.",
-          "keywords" : [ "avda", "alerta", "voz", "dor", "arresponsivo" ],
-          "use" : "Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.",
-          "copyright" : "© Apperta UK, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record an individual's level of consciousness.",
-          "keywords" : [ "avpu", "alert", "voice", "pain", "unresponsive", "awake", "speech", "pain", "unconscious", "voice", "consciousness", "verbal", "verbal response", "semicomatose", "conscious", "level of consciousness", "comatose", "confusion", "acvpu" ],
-          "use" : "Use to record a quick and simple assessment of an individual's level of consciousness, especially in an emergency situation. This assessment has been updated in response to 2017 changes to the NEWS assessment, now published as NEWS2.",
-          "copyright" : "© Apperta UK, openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.avpu-c.v0",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-avpu-c-001.v0"
+      "value" : "openEHR-EHR-OBSERVATION.ovl-avpu-c-002.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -6577,6 +6670,27 @@
           } ],
           "attributeTuples" : [ ]
         } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0009",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0010.0.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
       } ],
       "attributeTuples" : [ ]
     },
@@ -6586,14 +6700,23 @@
       "termDefinitions" : {
         "en" : { },
         "nb" : { },
-        "pt-br" : { }
+        "pt-br" : {
+          "at0000.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1.1",
+            "text" : "*ACVPU(en) (2)",
+            "description" : "*Simple scale used as part of an assessment to measure and record an individual's level of consciousness.(en)",
+            "comment" : "*ACVPU is an acronym for 'Alert', 'Confusion', 'Voice', 'Pain', 'Unresponsive'.(en)"
+          }
+        },
+        "sv" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "a272a109-1eb7-4640-8eae-e4ee74ff5db7",
+    "buildUid" : "44f7cf53-4262-40f8-891b-67a4a33a3a25",
     "rmName" : "openehr",
     "rmRelease" : "1.0.3",
     "generated" : true,
@@ -6610,11 +6733,25 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult",
+        "organisation" : "Region Östergötland",
+        "email" : "asa.skagerhult@regionostergotland.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
         "codeString" : "nb"
       },
       "author" : {
-        "name" : "Silje Ljosland Bakke",
-        "organisation" : "Helse Bergen HF"
+        "name" : "Silje Ljosland Bakke; John Tore Valand",
+        "organisation" : "Nasjonal IKT HF; Helse Bergen HF"
       },
       "otherDetails" : { }
     }, {
@@ -6634,7 +6771,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "4a0080e3-5ff8-4f8b-ac0e-b93ede47f367",
+    "uid" : "e2734783-e503-4d14-88d9-3883000cf342",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -6643,57 +6780,9 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1D03ABF2ED7D6734A8838BA7EF91DAD2"
+        "PARENT:MD5-CAM-1.0.1" : "FC69F4776269F4C9A11CDB3E9B1A7EA6"
       },
-      "details" : {
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Para registrar la cantidad de oxígeno administrada al sujeto en el momento de la observación. Se asumen valores de 21% de O2, FiO2 de 0,21 y velocidad de flujo de oxígeno de cero.",
-          "keywords" : [ "respirando", "oxígeno", "ambiental", "FiO2" ],
-          "use" : "Puede ser usado dentro de un arquetipo ACTION para especificar oxígenoterapia o dentro de arquetipos OBSERVATION tales como Gases arteriales o Respiraciones, como parte del estado del paciente, donde el conocimiento de la concentración de oxígeno ambiental es crítica para la interpretación de la observación.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For registrering av andel oksygen tilgjengelig i den luften pasienten innånder på observasjonstidspunktet, eller mengden oksygen som skal gis dersom registreringen er del av en forordning.",
-          "keywords" : [ "pusting", "respirasjon", "luft", "oksygen", "O2", "innpust", "inspirasjon", "FiO2", "oksygentilførsel", "ånding", "O₂", "PaO2" ],
-          "use" : "Brukes i en INSTRUCTION-arketype for å spesifisere en oksygenforordning, i en ACTION-arketype for å dokumentere oksygenterapi utført, eller i en OBSERVATION-arketype, som for eksempel \"Oksimetri\" eller \"Åndedrett\" som en del av pasientstatus, hvor kunnskap om eventuell oksygentilførsel er kritisk for tolking av observasjonen.\r\n\r\nSLOT'et \"Detaljer om administrasjonsmåte\" kan bli brukt til å legge til ytterligere strukturert informasjon om administrasjon av oksygen, for eksempel om det er med luftfukting eller mekanisk ventilering. Dette vil være relevant om det er en OBSERVATION-arketype på toppnivå der denne arketypen er nøstet, for eksempel OBSERVATION.indirect_oximetry. I andre brukstilfeller, der oksygentilførsel i seg selv er konseptet, for eksempel i en arketype som omhandler respiratorbehandling, vil denne arketypen være nyttig for å registrere mengden oksygen individet får tilført.\r\n\r\nBrukes også i kalkulasjoner av FiO₂/PaO₂-ratio i tillegg til andre algoritmer, som for eksempel oksygenekstrasjonsratio, etc.\r\n\r\nAtmosfærisk trykk er antatt å være tilsvarende som ved havoverflaten, dersom det ikke er nærmere angitt.\r\n\r\nHvis det ikke er angitt nærmere og ingen ekstra oksygentilførsel er gitt, kan det antas at individet er i omgivelser der det er 21% O₂, FiO₂ er 0.21.\r\n\r\nSelv om konseptnavnet i denne arketypen er \"Innåndet oksygen\" betyr det ikke at individet nødvendigvis puster inn den mengden oksygen/oksygenblanding som er ordinert eller gitt. \r\n For eksempel kan det være rapportert i kliniske journaler at \"pasienten får 3 liter O₂ på nesekateter\". Den faktisk innpustede oksygenblandingen vil variere med administrasjonsmåte eller andre utenomforliggende faktorer, for eksempel om individet puster overfladisk eller til stadighet fjerner nesekateter.",
-          "misuse" : "Skal ikke brukes for andre innpustede gasser, som for eksempel nitrogenoksid.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the amount of oxygen available in the air the subject inspires at the time of observation, or the amount of oxygen that is to be delivered, if part of an order.",
-          "keywords" : [ "breathing", "oxygen", "air", "respiration", "flow rate", "therapy", "O2", "O₂", "PaO2", "FiO2" ],
-          "use" : "Use within an INSTRUCTION archetype to specify an order of oxygen, in an ACTION archetype to record performed oxygen therapy, or within OBSERVATION archetypes such as Blood gases or Respirations, as part of patient state, where knowledge of ambient oxygen status is critical to interpretation of the observation.\r\n\r\nThe SLOT 'Oxygen delivery detail' can be used to specify additional structured information on the oxygen delivery, for example humidification or assisted ventilation. This will be relevant when there is an OBSERVATION archetype at top level, where this archetype is nested, for example OBSERVATION.indirect_oximetry. In other use cases, where the oxygen delivery itself is the concept, for example an archetype about mechanical ventilation, this archetype will be useful to record the amount of oxygen the individual is recieving.\r\n\r\nAlso use in calculation of FiO₂/PaO₂ ratio, in addition to other algorithms in intensive care medicine, for example oxygen extraction ratio, etc.\r\n\r\nAtmospheric pressure is assumed to equivalent to sea-level pressure, unless otherwise specified.\r\n\r\nWhere not specifically recorded values of 21% O₂, FiO₂ of 0.21 and oxygen flow rate of zero may be assumed.\r\n\r\n'Inspired oxygen' implies the amount of oxygen that was ordered or actioned, and normally reported in clinical records e.g.' the patient is on 30% Oxygen' and is not intended to capture the actual 'physiological' amount of oxygen that the patient receives, which will vary depending on the delivery method and other external conditions, such as whether the individual is breathing shallowly or is frequently removing the nasal prongs.",
-          "misuse" : "Do not use for other inhaled gases such as nitrous oxide.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.inspired_oxygen.v1",
     "differential" : true,
@@ -6759,10 +6848,10 @@
                     "constraint" : [ {
                       "lower" : 0.0,
                       "upper" : 50000.0,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true,
                       "lowerIncluded" : true,
-                      "upperIncluded" : true
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
+                      "lowerUnbounded" : false
                     } ]
                   }, {
                     "@type" : "C_INTEGER",
@@ -6770,10 +6859,10 @@
                     "constraint" : [ {
                       "lower" : 2,
                       "upper" : 2,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : false,
                       "lowerIncluded" : true,
-                      "upperIncluded" : true
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
+                      "lowerUnbounded" : false
                     } ]
                   } ]
                 }, {
@@ -6788,10 +6877,10 @@
                     "constraint" : [ {
                       "lower" : 0.0,
                       "upper" : 50.0,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true,
                       "lowerIncluded" : true,
-                      "upperIncluded" : true
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
+                      "lowerUnbounded" : false
                     } ]
                   }, {
                     "@type" : "C_INTEGER",
@@ -6799,10 +6888,10 @@
                     "constraint" : [ {
                       "lower" : 2,
                       "upper" : 2,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : false,
                       "lowerIncluded" : true,
-                      "upperIncluded" : true
+                      "upperIncluded" : true,
+                      "upperUnbounded" : false,
+                      "lowerUnbounded" : false
                     } ]
                   } ]
                 } ]
@@ -6834,10 +6923,10 @@
                   "constraint" : [ {
                     "lower" : 0.0,
                     "upper" : 1.0,
-                    "lowerUnbounded" : true,
-                    "upperUnbounded" : true,
                     "lowerIncluded" : true,
-                    "upperIncluded" : true
+                    "upperIncluded" : true,
+                    "upperUnbounded" : false,
+                    "lowerUnbounded" : false
                   } ]
                 } ]
               }, {
@@ -6846,14 +6935,13 @@
                 "children" : [ {
                   "@type" : "C_INTEGER",
                   "rmTypeName" : "INTEGER",
-                  "occurrences" : "1..1",
                   "constraint" : [ {
                     "lower" : 1,
                     "upper" : 1,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : false,
                     "lowerIncluded" : true,
-                    "upperIncluded" : true
+                    "upperIncluded" : true,
+                    "upperUnbounded" : false,
+                    "lowerUnbounded" : false
                   } ]
                 } ]
               } ],
@@ -6885,10 +6973,10 @@
                   "constraint" : [ {
                     "lower" : 0.0,
                     "upper" : 100.0,
-                    "lowerUnbounded" : true,
-                    "upperUnbounded" : true,
                     "lowerIncluded" : true,
-                    "upperIncluded" : true
+                    "upperIncluded" : true,
+                    "upperUnbounded" : false,
+                    "lowerUnbounded" : false
                   } ]
                 } ]
               }, {
@@ -6897,14 +6985,13 @@
                 "children" : [ {
                   "@type" : "C_INTEGER",
                   "rmTypeName" : "INTEGER",
-                  "occurrences" : "1..1",
                   "constraint" : [ {
                     "lower" : 2,
                     "upper" : 2,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : false,
                     "lowerIncluded" : true,
-                    "upperIncluded" : true
+                    "upperIncluded" : true,
+                    "upperUnbounded" : false,
+                    "lowerUnbounded" : false
                   } ]
                 } ]
               } ],
@@ -6930,14 +7017,15 @@
         "de" : { },
         "es-ar" : { },
         "en" : { },
-        "nb" : { }
+        "nb" : { },
+        "sv" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "da1573ee-05dc-41ec-a1f7-32f554da79ff",
+    "buildUid" : "416045c8-0030-4de9-bfe6-9d1a0505a366",
     "rmName" : "openehr",
     "rmRelease" : "1.0.3",
     "generated" : true,
@@ -6967,6 +7055,20 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult",
+        "organisation" : "Region Östergötland",
+        "email" : "asa.skagerhult@regionostergotland.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
         "codeString" : "nb"
       },
       "author" : {
@@ -6987,68 +7089,6 @@
         "organisation" : "Bitios.com"
       },
       "accreditation" : "Medical Doctor (Internal Medicine Specialist)",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "de90ea80-8dcb-4f5f-865b-81f4f4bf1889",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "42d74638634b22857c845a739dba8fb4"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.rls85.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-rls85-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "sv" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "8ab6491f-5863-3c15-85fa-e322c71f9ad6",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : { },
       "otherDetails" : { }
     } ]
   } ],

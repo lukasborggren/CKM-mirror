@@ -4086,7 +4086,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at1059.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
